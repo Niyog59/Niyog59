@@ -10,6 +10,34 @@ I like figuring out how things work, connecting the pieces, and making something
 
 <br>
 
+## Data Projects
+
+**[Vendor Performance Analysis](https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI)**<br>
+Loads retail sales and inventory data into SQLite, then digs into vendor performance with Python and a Power BI dashboard.<br>
+<b>What I found:</b> about $2.71M was tied up in unsold inventory, the top 10 vendors made up about 66% of purchases, and bulk orders cut unit costs by about 72%.<br>
+<sub>Python · SQL · SQLite · pandas · NumPy · SciPy · Power BI</sub>
+
+**[Airline Occupancy & Revenue Analysis](https://github.com/Niyog59/Airlines-Data-Analysis-SQL-Python)**<br>
+Queries an airline booking database to compare seat occupancy and revenue across aircraft, and estimates what a 10% bump in occupancy would bring in.<br>
+<b>What I found:</b> occupancy varies a lot between aircraft and some planes regularly underperform, so better fares and scheduling on those aircraft would bring the most revenue.<br>
+<sub>SQL · SQLite · Python · pandas · Matplotlib · Seaborn</sub>
+
+**[Airline Route Profitability](https://github.com/Niyog59/Airline-Profitability)**<br>
+A group project in R on a simulated year of flight data out of Dubai, testing whether route type, season, demand or load factor matters most for profit.<br>
+<b>What we found:</b> demand level was the strongest predictor of profit, full flights can still lose money, and peak season long-haul flights did best.<br>
+<sub>R · tidyverse · ggplot2 · R Markdown</sub>
+
+**[Sector Rotation in the Stock Market](https://github.com/Niyog59/Sector-Rotation-in-the-Stock-Market)**<br>
+Pulls 25 years of S&P 500 sector ETF prices and tracks how money moved between sectors through the dot-com crash, 2008 and COVID.<br>
+<b>What I found:</b> tech and consumer discretionary led over the long run, energy and financials swung the most, and utilities and consumer staples stayed the steadiest.<br>
+<sub>R · tidyverse · tidyquant · ggplot2</sub>
+
+**[Gym Management System](https://github.com/Niyog59/Gym-Management-Project-MySQL)**<br>
+A MySQL database for running a gym, with an ER diagram, a 3NF design across 5 tables, and tested queries for each use case.<br>
+<sub>MySQL · MySQL Workbench · draw.io</sub>
+
+<br>
+
 ## Tech Stack
 
 <p><b>Languages</b><br>
@@ -71,9 +99,8 @@ I like figuring out how things work, connecting the pieces, and making something
 
 Online fitness coaching for Nepalis living abroad, with independent coaches based in Nepal.
 
-**Role:** Solo developer
-
-I designed and built TalentYak, from the database and backend to the frontend and deployment. It has account sign-in, coach-written workout and nutrition plans, weekly check-ins with coach feedback, messaging between coaches and clients, and progress tracking for workouts, body measurements and meals.
+**Role:** Solo developer<br>
+I designed and built TalentYak, from the database and backend to the frontend and deployment. It has sign-in, coach-written workout and nutrition plans, weekly check-ins, messaging, and progress tracking for workouts, body stats and meals.
 
 <sub>Next.js · TypeScript · Supabase (PostgreSQL) · Vercel · Cloudflare R2</sub><br>
 <sub><a href="https://talentyak.com">talentyak.com</a> &nbsp;·&nbsp; Source code private</sub>
@@ -85,8 +112,7 @@ I designed and built TalentYak, from the database and backend to the frontend an
 
 A travel marketplace for Nepal where people can book treks, stays, buses and transfers.
 
-**Role:** Backend contributor
-
+**Role:** Backend contributor<br>
 Worked on partner onboarding APIs, booking workflows, and relational database design as part of a two-person team.
 
 <sub><a href="https://nepgram.com">nepgram.com</a> &nbsp;·&nbsp; Source code private</sub>
@@ -98,48 +124,19 @@ Worked on partner onboarding APIs, booking workflows, and relational database de
 
 A B2B marketplace for Nepal that connects businesses with verified local suppliers.
 
-**Role:** Solo developer
-
-I designed and built Meet Merchants myself, from the database and backend to the frontend and deployment. It has a supplier onboarding flow with draft saving and document upload, an admin review queue I use to verify suppliers, supplier profiles with product catalogs, and search by category and city.
+**Role:** Solo developer<br>
+I designed and built Meet Merchants myself, from the database and backend to the frontend and deployment. It has supplier onboarding with document upload, an admin review queue I use to verify suppliers, product catalogs, and search by category and city.
 
 <sub>Next.js · TypeScript · Supabase (PostgreSQL) · Tailwind CSS · Vercel · Cloudflare</sub><br>
 <sub><a href="https://meetmerchants.com">meetmerchants.com</a> &nbsp;·&nbsp; Source code private</sub>
 
 <br>
 
-## Projects
-
-### Data Analytics & Visualization
-
-**[Vendor Performance Analysis](https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI)**<br>
-Loads retail sales and inventory data into SQLite, then finds underperforming brands, vendor concentration, bulk-buying savings and unsold stock, with a Power BI dashboard on top.<br>
-<sub>Python · SQLite · pandas · NumPy · SciPy · Power BI</sub>
-
-**[Airline Occupancy & Revenue Analysis](https://github.com/Niyog59/Airlines-Data-Analysis-SQL-Python)**<br>
-Queries an airline booking database to compare seat occupancy and revenue across aircraft, and estimates what a 10% bump in occupancy would bring in.<br>
-<sub>SQL · SQLite · Python · pandas · Matplotlib · Seaborn</sub>
-
-**[Airline Route Profitability](https://github.com/Niyog59/Airline-Profitability)**<br>
-A group project in R that looks at a simulated year of flight data out of Dubai to see whether route type, season, demand or load factor matters most for profit.<br>
-<sub>R · tidyverse · ggplot2 · R Markdown</sub>
-
-**[Sector Rotation in the Stock Market](https://github.com/Niyog59/Sector-Rotation-in-the-Stock-Market)**<br>
-Pulls 25 years of S&P 500 sector ETF prices and tracks which sectors held up during crashes and which ones led the recoveries.<br>
-<sub>R · tidyverse · tidyquant · ggplot2</sub>
-
-### Backend & APIs
+## More Projects
 
 **[Geocoding API](https://github.com/Niyog59/Geocoding-API)**<br>
 A FastAPI service on top of OpenStreetMap's Nominatim for address search, reverse lookup and autocomplete, with API keys, rate limiting and response caching.<br>
 <sub>Python · FastAPI · httpx · REST API</sub>
-
-### SQL & Database Design
-
-**[Gym Management System](https://github.com/Niyog59/Gym-Management-Project-MySQL)**<br>
-A MySQL database for running a gym, with an ER diagram, a 3NF design across 5 tables, and tested queries for each use case.<br>
-<sub>MySQL · MySQL Workbench · draw.io</sub>
-
-### Experiments & Prototypes
 
 **[SewaPrabaha](https://github.com/Niyog59/SewaPrabaha)**<br>
 The starting setup for a Nepali services marketplace: a monorepo with a Next.js frontend and an Express API. It's an early scaffold, not a finished app.<br>
