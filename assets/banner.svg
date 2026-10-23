@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-label="Niyog Uprety. I build things.">
+<title>Niyog Uprety. I build things.</title>
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0B1F3A"/><stop offset="0.55" stop-color="#0F3B57"/><stop offset="1" stop-color="#0E7C86"/>
+</linearGradient>
+<linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#3FC1C9" stop-opacity="0"/><stop offset="0.5" stop-color="#3FC1C9" stop-opacity="0.55"/><stop offset="1" stop-color="#3FC1C9" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="240" rx="18" fill="url(#g)"/>
+<g opacity="0.35" fill="none" stroke="#7FDCE0" stroke-width="1.5">
+<path d="M760 190 L840 140 L910 165 L990 95 L1060 120 L1140 60"/>
+</g>
+<g fill="#7FDCE0">
+<circle cx="760" cy="190" r="4" opacity="0.6"/><circle cx="840" cy="140" r="4" opacity="0.7"/><circle cx="910" cy="165" r="4" opacity="0.6"/>
+<circle cx="990" cy="95" r="5" opacity="0.8"/><circle cx="1060" cy="120" r="4" opacity="0.7"/><circle cx="1140" cy="60" r="6" opacity="0.9"/>
+</g>
+<g fill="#FFFFFF" opacity="0.06">
+<rect x="820" y="30" width="44" height="44" rx="8"/><rect x="1080" y="160" width="60" height="44" rx="8"/><rect x="960" y="170" width="30" height="30" rx="6"/>
+</g>
+<rect x="72" y="166" width="220" height="2" fill="url(#line)"/>
+<text x="72" y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="54" font-weight="700" fill="#FFFFFF">Niyog Uprety</text>
+<text x="74" y="152" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="24" font-weight="500" fill="#BFEFF1">I build things.</text>
+</svg>
