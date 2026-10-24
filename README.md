@@ -10,6 +10,39 @@ I like figuring out how things work, connecting the pieces, and making something
 
 <br>
 
+## Products I've Built
+
+<table>
+<tr>
+<td width="33%" valign="top" align="center">
+<a href="https://talentyak.com"><img src="assets/products/talentyak.png" alt="TalentYak logo" width="52" height="52"></a><br>
+<b><a href="https://talentyak.com">TalentYak</a></b><br>
+<sub>Solo developer</sub>
+<p>Online fitness coaching for Nepalis abroad. I built the whole thing myself, from the database to deployment.</p>
+<sub>Next.js · TypeScript · Supabase · Vercel</sub><br>
+<sub><a href="https://talentyak.com">talentyak.com</a> · Source code private</sub>
+</td>
+<td width="33%" valign="top" align="center">
+<a href="https://nepgram.com"><img src="assets/products/nepgram.svg" alt="Nepgram logo" width="52" height="52"></a><br>
+<b><a href="https://nepgram.com">Nepgram</a></b><br>
+<sub>Backend contributor</sub>
+<p>A travel marketplace for Nepal. I worked on partner APIs, bookings and the database in a two-person team.</p>
+<sub>Backend · APIs · Database design</sub><br>
+<sub><a href="https://nepgram.com">nepgram.com</a> · Source code private</sub>
+</td>
+<td width="33%" valign="top" align="center">
+<a href="https://meetmerchants.com"><img src="assets/products/meetmerchants.svg" alt="Meet Merchants logo" width="52" height="52"></a><br>
+<b><a href="https://meetmerchants.com">Meet Merchants</a></b><br>
+<sub>Solo developer</sub>
+<p>A B2B marketplace connecting Nepali businesses with verified suppliers. I built the whole thing myself.</p>
+<sub>Next.js · TypeScript · Supabase · Vercel</sub><br>
+<sub><a href="https://meetmerchants.com">meetmerchants.com</a> · Source code private</sub>
+</td>
+</tr>
+</table>
+
+<br>
+
 ## Data Projects
 
 **[Vendor Performance Analysis](https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI)**<br>
@@ -87,48 +120,6 @@ A MySQL database for running a gym, with an ER diagram, a 3NF design across 5 ta
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/mysql-workbench-dark.svg"><img src="assets/stack/mysql-workbench-light.svg" alt="MySQL Workbench" title="MySQL Workbench" height="34"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/cursor-dark.svg"><img src="assets/stack/cursor-light.svg" alt="Cursor" title="Cursor" height="34"></picture>
 </p>
-
-<br>
-
-## Products I've Built
-
-<h3>
-  <a href="https://talentyak.com"><img src="assets/products/talentyak.png" alt="TalentYak logo" width="36" height="36" align="center"></a>
-  &nbsp;<a href="https://talentyak.com">TalentYak</a>
-</h3>
-
-Online fitness coaching for Nepalis living abroad, with independent coaches based in Nepal.
-
-**Role:** Solo developer<br>
-I designed and built TalentYak, from the database and backend to the frontend and deployment. It has sign-in, coach-written workout and nutrition plans, weekly check-ins, messaging, and progress tracking for workouts, body stats and meals.
-
-<sub>Next.js · TypeScript · Supabase (PostgreSQL) · Vercel · Cloudflare R2</sub><br>
-<sub><a href="https://talentyak.com">talentyak.com</a> &nbsp;·&nbsp; Source code private</sub>
-
-<h3>
-  <a href="https://nepgram.com"><img src="assets/products/nepgram.svg" alt="Nepgram logo" width="36" height="36" align="center"></a>
-  &nbsp;<a href="https://nepgram.com">Nepgram</a>
-</h3>
-
-A travel marketplace for Nepal where people can book treks, stays, buses and transfers.
-
-**Role:** Backend contributor<br>
-Worked on partner onboarding APIs, booking workflows, and relational database design as part of a two-person team.
-
-<sub><a href="https://nepgram.com">nepgram.com</a> &nbsp;·&nbsp; Source code private</sub>
-
-<h3>
-  <a href="https://meetmerchants.com"><img src="assets/products/meetmerchants.svg" alt="Meet Merchants logo" width="36" height="36" align="center"></a>
-  &nbsp;<a href="https://meetmerchants.com">Meet Merchants</a>
-</h3>
-
-A B2B marketplace for Nepal that connects businesses with verified local suppliers.
-
-**Role:** Solo developer<br>
-I designed and built Meet Merchants myself, from the database and backend to the frontend and deployment. It has supplier onboarding with document upload, an admin review queue I use to verify suppliers, product catalogs, and search by category and city.
-
-<sub>Next.js · TypeScript · Supabase (PostgreSQL) · Tailwind CSS · Vercel · Cloudflare</sub><br>
-<sub><a href="https://meetmerchants.com">meetmerchants.com</a> &nbsp;·&nbsp; Source code private</sub>
 
 <br>
 
