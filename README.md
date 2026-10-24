@@ -60,7 +60,7 @@ I like figuring out how things work, connecting the pieces, and making something
 </p>
 </details>
 
-## Products & Backend Engineering
+## Products
 
 <p>
 <a href="https://talentyak.com"><img src="assets/products/talentyak.png" alt="TalentYak logo" width="48" height="48" align="left" hspace="12"></a>
@@ -91,17 +91,17 @@ A travel marketplace for Nepal. I worked on partner onboarding APIs, booking wor
 <br>
 
 <p>
-<a href="https://meetmerchants.com"><img src="assets/products/meetmerchants.svg" alt="Meet Merchants logo" width="48" height="48" align="left" hspace="12"></a>
-<b><a href="https://meetmerchants.com">Meet Merchants</a></b><br>
+<a href="https://meetmerchants.com"><img src="assets/products/meetmerchants.svg" alt="MeetMerchants logo" width="48" height="48" align="left" hspace="12"></a>
+<b><a href="https://meetmerchants.com">MeetMerchants</a></b><br>
 <sub>Solo developer</sub>
 </p>
 <br clear="left">
 
-A B2B marketplace connecting Nepali businesses with suppliers. I built the application from the database and backend to the frontend and deployment.
+I built MeetMerchants, a B2B marketplace that connects businesses and suppliers in Nepal.
 
-<a href="https://meetmerchants.com">Visit website</a> · Source code private
+<a href="https://meetmerchants.com">Visit website</a>
 
-## Data Analytics & Visualization
+## Data Analytics
 
 **Airline Route Profitability**
 
