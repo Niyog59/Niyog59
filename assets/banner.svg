@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-label="Niyog Uprety. I build things.">
-<title>Niyog Uprety. I build things.</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-label="Niyog Uprety. Data Engineer, Data Analyst, Python and SQL. I like building things.">
+<title>Niyog Uprety. Data Engineer, Data Analyst, Python and SQL. I like building things.</title>
 <defs>
 <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
 <stop offset="0" stop-color="#0B1F3A"/><stop offset="0.55" stop-color="#0F3B57"/><stop offset="1" stop-color="#0E7C86"/>
@@ -21,6 +21,6 @@
 </g>
 <rect x="72" y="168" width="220" height="2" fill="url(#line)"/>
 <text x="72" y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="54" font-weight="700" fill="#FFFFFF">Niyog Uprety</text>
-<text x="74" y="152" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="24" font-weight="500" fill="#BFEFF1">I build things.</text>
-<text x="74" y="196" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="500" fill="#7FDCE0" letter-spacing="0.5">Data, products, and the systems behind them.</text>
+<text x="74" y="152" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="24" font-weight="500" fill="#BFEFF1">Data Engineer | Data Analyst | Python &amp; SQL</text>
+<text x="74" y="196" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="500" fill="#7FDCE0" letter-spacing="0.5">I like building things.</text>
 </svg>
