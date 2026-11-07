@@ -2,22 +2,30 @@
   <img src="assets/banner.svg" alt="Niyog Uprety. Data Engineer, Data Analyst, Python and SQL. I like building things." width="100%">
 </p>
 
-**Houston based · Data Engineer / Data Analyst · Open to full time data roles**
+**Houston based · Data Engineer / Data Analyst · Graduating May 2027 · Open to full time data roles**
 
 <a href="https://www.linkedin.com/in/niyog-uprety-177b9621a/"><img src="assets/linkedin.svg" alt="Connect on LinkedIn" height="36"></a> <a href="https://jobobservatory.dev"><img src="assets/projects/job-observatory-stats.svg" alt="Job Observatory live stats" height="36"></a>
 
 Hi, I'm Niyog. I like building data pipelines and then poking at the data they collect. Most
 of my work is Python and SQL: getting data in reliably, keeping it honest, and turning it into
 something I can actually answer questions with.
-Following are some of my works:
+
+<!-- OBSERVATORY_STATS:START -->
+51 employer boards checked twice a day · 148 open jobs tracked right now · 259 jobs kept in total · requirements extracted on 166 of 167 kept postings (99%) · updated 2026-11-05
+<!-- OBSERVATORY_STATS:END -->
+
 ## Job Observatory
 
 <a href="https://github.com/Niyog59/Job-Market-Intelligence"><img src="assets/projects/job-observatory-logo.png" alt="Job Observatory logo" width="84"></a>
 
 - **What it is:** a pipeline and website that collects job listings from employer boards and keeps every version of every listing, live on one AWS server since November 4, 2026.
 - **The hard part:** an AI model pulls requirements out of each listing, and Python checks every answer against the listing text before dbt turns the history into reports. Only complete scans count as proof a job closed.
-- **Measured:** collecting all boards takes 133 seconds; 46 dbt models and 125 data tests pass in CI; a Spark vs PostgreSQL test on 6.6M rows kept PostgreSQL (5.18s vs 12.40s, identical results).
-- **Spark and Databricks:** I wanted to see whether Spark would do the reporting step better than PostgreSQL. I rebuilt three of the reporting models in PySpark and ran them on my Mac and on Databricks Free Edition. PostgreSQL was faster at every size I tried, so the live site stayed on PostgreSQL and dbt, on the AWS server. The Spark code and the timings are in the repo. Spark and Databricks are not part of the running system.
+
+I host it on AWS, on one EC2 server. Python collectors pull the postings from <!--PROFILE:boards-->51<!--/PROFILE:boards--> Greenhouse and Lever boards, twice a day, and the jobs show up on the live site for anyone to search. Airflow runs the whole schedule: collection, extraction, the dbt build, and publishing, and it retries anything that failed every 15 minutes. Raw pages go to S3 as they are collected, and the database is backed up to S3, so the data is not only on the server.
+
+An AI model reads each posting and pulls out the requirements, the location, and the job family into fixed fields. Every value it returns has to quote the posting it came from, word for word. dbt turns those fields into the reporting tables. The reports page and the dashboard feed are rebuilt from those tables at every publish, so the dashboards always run on the newest batch of data.
+
+I also tested Spark. I rebuilt three of the reporting models in PySpark and ran them on Databricks, to see whether Spark would do that step better than PostgreSQL. It did not. The data is small enough to fit in one database, so Spark's overhead cost more than the parallel work saved, and the live system stayed on PostgreSQL. The Spark code and the timings are in the repo. Spark and Databricks are not part of the running system.
 
 <p>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/python-dark.svg"><img src="assets/stack/python-light.svg" alt="Python" title="Python" height="24"></picture>
@@ -26,6 +34,7 @@ Following are some of my works:
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/airflow-dark.svg"><img src="assets/stack/airflow-light.svg" alt="Airflow" title="Airflow" height="24"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/aws-dark.svg"><img src="assets/stack/aws-light.svg" alt="AWS" title="AWS" height="24"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/docker-dark.svg"><img src="assets/stack/docker-light.svg" alt="Docker" title="Docker" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/databricks-dark.svg"><img src="assets/stack/databricks-light.svg" alt="Databricks" title="Databricks" height="24"></picture>
 </p>
 
 [Live site](https://jobobservatory.dev) · [Reports](https://jobobservatory.dev/reports) · [Source](https://github.com/Niyog59/Job-Market-Intelligence) · [What went wrong](https://github.com/Niyog59/Job-Market-Intelligence/blob/main/docs/PROBLEMS.md) · [Spark and Databricks comparison](https://github.com/Niyog59/Job-Market-Intelligence/blob/main/docs/spark/README.md)
