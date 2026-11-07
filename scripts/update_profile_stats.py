@@ -9,6 +9,10 @@ How it works:
 - Rewrites ONLY the text between these markers in README.md:
     <!-- OBSERVATORY_STATS:START --> ... <!-- OBSERVATORY_STATS:END -->
     <!-- OBSERVATORY_INSIGHTS:START --> ... <!-- OBSERVATORY_INSIGHTS:END -->
+  and the number inside any inline board-count marker:
+    <!--PROFILE:boards-->51<!--/PROFILE:boards-->
+  (the comments are invisible when the page renders; only the number
+  between them is shown, and it always matches boards_enabled)
 - Regenerates assets/projects/job-observatory-stats.svg from the same JSON,
   so the stats card image never goes stale either.
 - Safety: if the fetch fails, a field is missing, or a number looks
@@ -93,6 +97,12 @@ def insights_block(d: dict) -> str:
     )
 
 
+def fill_boards(text: str, boards_enabled: int) -> str:
+    """Rewrite the number inside every inline board-count marker."""
+    pattern = re.compile(r"(<!--PROFILE:boards-->)\d+(<!--/PROFILE:boards-->)")
+    return pattern.sub(lambda m: f"{m.group(1)}{boards_enabled}{m.group(2)}", text)
+
+
 def replace_block(text: str, name: str, new_body: str) -> str:
     pattern = re.compile(
         rf"(<!-- {name}:START -->).*?(<!-- {name}:END -->)", re.DOTALL
@@ -138,6 +148,7 @@ def main() -> int:
     original = README.read_text(encoding="utf-8")
     updated = replace_block(original, "OBSERVATORY_STATS", stats_block(data))
     updated = replace_block(updated, "OBSERVATORY_INSIGHTS", insights_block(data))
+    updated = fill_boards(updated, data["boards_enabled"])
 
     changed = False
     if updated != original:
