@@ -2,7 +2,7 @@
   <img src="assets/banner.svg" alt="Niyog Uprety. Data Engineer, Data Analyst, Python and SQL. I like building things." width="100%">
 </p>
 
-**Houston based · Data Engineer / Data Analyst · Graduating May 2027 · Open to full time data roles**
+**Houston based · Data Engineer / Data Analyst · Open to full time data roles**
 
 <a href="https://www.linkedin.com/in/niyog-uprety-177b9621a/"><img src="assets/linkedin.svg" alt="Connect on LinkedIn" height="36"></a> <a href="https://jobobservatory.dev"><img src="assets/projects/job-observatory-stats.svg" alt="Job Observatory live stats" height="36"></a>
 
