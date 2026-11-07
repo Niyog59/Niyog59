@@ -2,74 +2,189 @@
   <img src="assets/banner.svg" alt="Niyog Uprety. Data Engineer, Data Analyst, Python and SQL. I like building things." width="100%">
 </p>
 
-Hi, I'm Niyog. I like building data pipelines and then poking at the data they collect. Most
-of my work is Python and SQL: getting data in reliably, keeping it honest, and turning it into
-something I can actually answer questions with.
+**Houston based · Data Engineer / Data Analyst · Graduating May 2027 · Open to full time data roles**
 
-<a href="https://www.linkedin.com/in/niyog-uprety-177b9621a/"><img src="assets/linkedin.svg" alt="Connect on LinkedIn" height="36"></a>
+<a href="https://www.linkedin.com/in/niyog-uprety-177b9621a/"><img src="assets/linkedin.svg" alt="Connect on LinkedIn" height="36"></a> <a href="https://jobobservatory.dev"><img src="assets/projects/job-observatory-stats.svg" alt="Job Observatory live stats" height="36"></a>
+
+Hi, I'm Niyog. I build data pipelines in Python and SQL, keep the data they collect honest, and turn it into answers. The first project below is a job market pipeline that runs twice a day on its own server.
+
+<!-- OBSERVATORY_STATS:START -->
+51 employer boards checked twice a day · 148 open jobs tracked right now · 259 jobs kept in total · requirements extracted on 166 of 167 kept postings (99%) · updated 2026-11-05
+<!-- OBSERVATORY_STATS:END -->
 
 ## Job Observatory
 
-<a href="https://jobobservatory.dev"><img src="assets/projects/job-observatory.png" alt="A job page on jobobservatory.dev: the job overview on the left and the requirements extracted from the description on the right, each with a link to the sentence it came from." width="100%"></a>
+<a href="https://github.com/Niyog59/Job-Market-Intelligence"><img src="assets/projects/job-observatory-logo.png" alt="Job Observatory logo" width="84"></a>
 
-I wanted an easier way to find jobs without checking every company's career page, so I built
-a pipeline that does it for me. Twice a day it collects listings from 51 employers' job boards, keeps every version
-of every listing, and uses an AI model to pull out the requirements. Python checks each answer
-and looks for every quoted line in the listing. dbt turns the history into tested tables, and
-Airflow runs it all in Docker on one AWS server.
+- **What it is:** a pipeline and website that collects job listings from employer boards and keeps every version of every listing, live on one AWS server since November 4, 2026.
+- **The hard part:** an AI model pulls requirements out of each listing, and Python checks every answer against the listing text before dbt turns the history into reports. Only complete scans count as proof a job closed.
+- **Measured:** collecting all boards takes 133 seconds; 46 dbt models and 125 data tests pass in CI; a Spark vs PostgreSQL test on 6.6M rows kept PostgreSQL (5.18s vs 12.40s, identical results).
 
-- Collecting all 51 boards took 133 seconds, and publishing the reports took 25 (measured on
-  my Mac with the real data, 2026-11-03).
-- I tested whether Spark would beat PostgreSQL for the reporting step. On 6.6 million rows of
-  synthetic test data, PostgreSQL took 5.18 seconds and Spark 12.40 for the same three
-  transformations, with identical results. I kept PostgreSQL.
-- It runs in production at jobobservatory.dev since 2026-11-04, with nightly backups to S3.
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/python-dark.svg"><img src="assets/stack/python-light.svg" alt="Python" title="Python" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/postgresql-dark.svg"><img src="assets/stack/postgresql-light.svg" alt="PostgreSQL" title="PostgreSQL" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/dbt-dark.svg"><img src="assets/stack/dbt-light.svg" alt="dbt" title="dbt" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/airflow-dark.svg"><img src="assets/stack/airflow-light.svg" alt="Airflow" title="Airflow" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/aws-dark.svg"><img src="assets/stack/aws-light.svg" alt="AWS" title="AWS" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/docker-dark.svg"><img src="assets/stack/docker-light.svg" alt="Docker" title="Docker" height="24"></picture>
+</p>
 
-<a href="https://jobobservatory.dev">Live site</a> · <a href="https://github.com/Niyog59/Job-Market-Intelligence">Source and write-up</a> · <a href="https://github.com/Niyog59/Job-Market-Intelligence/blob/main/docs/PROBLEMS.md">What went wrong</a>
+[Live site](https://jobobservatory.dev) · [Reports](https://jobobservatory.dev/reports) · [Source](https://github.com/Niyog59/Job-Market-Intelligence) · [What went wrong](https://github.com/Niyog59/Job-Market-Intelligence/blob/main/docs/PROBLEMS.md)
 
-## Analysis
+### What the job data shows
 
-**What the job data shows so far.** The pipeline publishes its own reports, and these are the
-numbers I find most interesting.
+<!-- OBSERVATORY_INSIGHTS:START -->
+Of the 148 open data, analytics, and software jobs I track in Dallas-Fort Worth, Houston, and remote-for-Texas (29 employers, collected through 2026-11-05), only 10% of those with a clear level are junior and 84% are senior or above. 27% mention generative AI. It is a small group of employers and a single snapshot, so it describes these listings, not the whole market.
+<!-- OBSERVATORY_INSIGHTS:END -->
 
-<a href="https://jobobservatory.dev/insights"><img src="assets/projects/job-observatory-insights.png" alt="Market insights page: 148 open jobs, 29 employers, 10% junior and 84% senior or above among jobs with a clear level, 27% mention generative AI." width="100%"></a>
+## Other projects
 
-Of the 148 open data, analytics, and software jobs I track in Dallas-Fort Worth, Houston, and
-remote-for-Texas (29 employers, collected through 2026-11-05), only 10% of those with a clear
-level are junior. Among the 166 postings with extracted details, 38% list 5 to 7 years as
-their minimum experience and only 13% ask for 2 years or less. It is a small group of employers and a single
-snapshot, so it describes these listings, not the whole market.
-<a href="https://jobobservatory.dev/reports">See the reports</a>
+<table>
+<tr>
+<td width="33%" valign="top">
+<a href="https://github.com/Niyog59/TalentYak"><img src="assets/products/talentyak.png" alt="TalentYak logo" width="72"></a>
+<h3><a href="https://github.com/Niyog59/TalentYak">TalentYak</a></h3>
+<ul>
+<li><b>What:</b> fitness coaching platform for Nepali coaches and clients abroad, designed and built on my own.</li>
+<li><b>Hard part:</b> PostgreSQL row-level security, money stored as integers with tests, Stripe events safe to receive twice.</li>
+<li><b>Status:</b> test site live; no real payments.</li>
+</ul>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/python-dark.svg"><img src="assets/stack/python-light.svg" alt="Python" title="Python" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/postgresql-dark.svg"><img src="assets/stack/postgresql-light.svg" alt="PostgreSQL" title="PostgreSQL" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/dbt-dark.svg"><img src="assets/stack/dbt-light.svg" alt="dbt" title="dbt" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/airflow-dark.svg"><img src="assets/stack/airflow-light.svg" alt="Airflow" title="Airflow" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/aws-dark.svg"><img src="assets/stack/aws-light.svg" alt="AWS" title="AWS" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/docker-dark.svg"><img src="assets/stack/docker-light.svg" alt="Docker" title="Docker" height="24"></picture>
+</p>
+<p><a href="https://jobobservatory.dev">Live site</a> · <a href="https://jobobservatory.dev/reports">Reports</a> · <a href="https://github.com/Niyog59/Job-Market-Intelligence">Source</a> · <a href="https://github.com/Niyog59/Job-Market-Intelligence/blob/main/docs/PROBLEMS.md">What went wrong</a></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/Niyog59/TalentYak"><img src="assets/products/talentyak.png" alt="TalentYak logo" width="84"></a>
+<h3><a href="https://github.com/Niyog59/TalentYak">TalentYak</a></h3>
+<p>A fitness coaching platform for Nepali coaches and clients abroad, designed and built on my own. The interesting work is in the data layer: PostgreSQL row-level security so people only see their own records, money stored as integers with tests, and Stripe payment events that are safe to receive twice. The test site is live; it handles no real payments.</p>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/nextjs-dark.svg"><img src="assets/stack/nextjs-light.svg" alt="Next.js" title="Next.js" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/typescript-dark.svg"><img src="assets/stack/typescript-light.svg" alt="TypeScript" title="TypeScript" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/react-dark.svg"><img src="assets/stack/react-light.svg" alt="React" title="React" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/supabase-dark.svg"><img src="assets/stack/supabase-light.svg" alt="Supabase" title="Supabase" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/vercel-dark.svg"><img src="assets/stack/vercel-light.svg" alt="Vercel" title="Vercel" height="24"></picture>
+</p>
+<p><a href="https://talentyak.com">Live site</a> · <a href="https://github.com/Niyog59/TalentYak">Source</a> · <a href="https://github.com/Niyog59/TalentYak/blob/main/docs/PORTFOLIO.md">Technical overview</a></p>
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI"><img src="assets/projects/vendor-performance-logo.png" alt="Vendor Performance Analysis logo" width="72"></a>
+<h3><a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI">Vendor Performance Analysis</a></h3>
+<ul>
+<li><b>What:</b> a liquor distributor's purchases and sales, loaded into SQLite, summarized in SQL, analyzed in Python and Power BI.</li>
+<li><b>Finding:</b> top 10 vendors are about 66% of purchase dollars; about $2.71M tied up in unsold inventory.</li>
+<li><b>In the repo:</b> written report and Power BI dashboard.</li>
+</ul>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/python-dark.svg"><img src="assets/stack/python-light.svg" alt="Python" title="Python" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/postgresql-dark.svg"><img src="assets/stack/postgresql-light.svg" alt="PostgreSQL" title="PostgreSQL" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/dbt-dark.svg"><img src="assets/stack/dbt-light.svg" alt="dbt" title="dbt" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/airflow-dark.svg"><img src="assets/stack/airflow-light.svg" alt="Airflow" title="Airflow" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/aws-dark.svg"><img src="assets/stack/aws-light.svg" alt="AWS" title="AWS" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/docker-dark.svg"><img src="assets/stack/docker-light.svg" alt="Docker" title="Docker" height="24"></picture>
+</p>
+<p><a href="https://jobobservatory.dev">Live site</a> · <a href="https://jobobservatory.dev/reports">Reports</a> · <a href="https://github.com/Niyog59/Job-Market-Intelligence">Source</a> · <a href="https://github.com/Niyog59/Job-Market-Intelligence/blob/main/docs/PROBLEMS.md">What went wrong</a></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/Niyog59/TalentYak"><img src="assets/products/talentyak.png" alt="TalentYak logo" width="84"></a>
+<h3><a href="https://github.com/Niyog59/TalentYak">TalentYak</a></h3>
+<p>A fitness coaching platform for Nepali coaches and clients abroad, designed and built on my own. The interesting work is in the data layer: PostgreSQL row-level security so people only see their own records, money stored as integers with tests, and Stripe payment events that are safe to receive twice. The test site is live; it handles no real payments.</p>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/nextjs-dark.svg"><img src="assets/stack/nextjs-light.svg" alt="Next.js" title="Next.js" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/typescript-dark.svg"><img src="assets/stack/typescript-light.svg" alt="TypeScript" title="TypeScript" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/react-dark.svg"><img src="assets/stack/react-light.svg" alt="React" title="React" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/supabase-dark.svg"><img src="assets/stack/supabase-light.svg" alt="Supabase" title="Supabase" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/vercel-dark.svg"><img src="assets/stack/vercel-light.svg" alt="Vercel" title="Vercel" height="24"></picture>
+</p>
+<p><a href="https://talentyak.com">Live site</a> · <a href="https://github.com/Niyog59/TalentYak">Source</a> · <a href="https://github.com/Niyog59/TalentYak/blob/main/docs/PORTFOLIO.md">Technical overview</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI"><img src="assets/projects/vendor-performance-logo.png" alt="Vendor Performance Analysis logo" width="84"></a>
+<h3><a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI">Vendor Performance Analysis</a></h3>
+<p>A liquor distributor's purchase and sales records, loaded into SQLite, summarized in SQL, and analyzed in Python and Power BI. The top 10 vendors account for about 66% of purchase dollars, and about $2.71M is tied up in unsold inventory. The repo includes the written report and the Power BI dashboard.</p>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/sql-dark.svg"><img src="assets/stack/sql-light.svg" alt="SQL" title="SQL" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/python-dark.svg"><img src="assets/stack/python-light.svg" alt="Python" title="Python" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/pandas-dark.svg"><img src="assets/stack/pandas-light.svg" alt="pandas" title="pandas" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/powerbi-dark.svg"><img src="assets/stack/powerbi-light.svg" alt="Power BI" title="Power BI" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/jupyter-dark.svg"><img src="assets/stack/jupyter-light.svg" alt="Jupyter" title="Jupyter" height="24"></picture>
+</p>
+<p><a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI">Source</a> · <a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI/blob/main/Vendor%20Performance%20Report.pdf">Report (PDF)</a></p>
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/Niyog59/Airline-Profitability"><img src="assets/projects/airline-profitability-logo.png" alt="Airline Route Profitability logo" width="72"></a>
+<h3><a href="https://github.com/Niyog59/Airline-Profitability">Airline Route Profitability</a></h3>
+<ul>
+<li><b>What:</b> R analysis of profitability across 7,974 simulated flights, built with Shaheer Ahmed.</li>
+<li><b>Finding:</b> long-haul averaged about $160K profit per flight; short-haul lost about $9K on average.</li>
+<li><b>Honest note:</b> simulated data, so these are patterns, not causes.</li>
+</ul>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/python-dark.svg"><img src="assets/stack/python-light.svg" alt="Python" title="Python" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/postgresql-dark.svg"><img src="assets/stack/postgresql-light.svg" alt="PostgreSQL" title="PostgreSQL" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/dbt-dark.svg"><img src="assets/stack/dbt-light.svg" alt="dbt" title="dbt" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/airflow-dark.svg"><img src="assets/stack/airflow-light.svg" alt="Airflow" title="Airflow" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/aws-dark.svg"><img src="assets/stack/aws-light.svg" alt="AWS" title="AWS" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/docker-dark.svg"><img src="assets/stack/docker-light.svg" alt="Docker" title="Docker" height="24"></picture>
+</p>
+<p><a href="https://jobobservatory.dev">Live site</a> · <a href="https://jobobservatory.dev/reports">Reports</a> · <a href="https://github.com/Niyog59/Job-Market-Intelligence">Source</a> · <a href="https://github.com/Niyog59/Job-Market-Intelligence/blob/main/docs/PROBLEMS.md">What went wrong</a></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/Niyog59/TalentYak"><img src="assets/products/talentyak.png" alt="TalentYak logo" width="84"></a>
+<h3><a href="https://github.com/Niyog59/TalentYak">TalentYak</a></h3>
+<p>A fitness coaching platform for Nepali coaches and clients abroad, designed and built on my own. The interesting work is in the data layer: PostgreSQL row-level security so people only see their own records, money stored as integers with tests, and Stripe payment events that are safe to receive twice. The test site is live; it handles no real payments.</p>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/nextjs-dark.svg"><img src="assets/stack/nextjs-light.svg" alt="Next.js" title="Next.js" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/typescript-dark.svg"><img src="assets/stack/typescript-light.svg" alt="TypeScript" title="TypeScript" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/react-dark.svg"><img src="assets/stack/react-light.svg" alt="React" title="React" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/supabase-dark.svg"><img src="assets/stack/supabase-light.svg" alt="Supabase" title="Supabase" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/vercel-dark.svg"><img src="assets/stack/vercel-light.svg" alt="Vercel" title="Vercel" height="24"></picture>
+</p>
+<p><a href="https://talentyak.com">Live site</a> · <a href="https://github.com/Niyog59/TalentYak">Source</a> · <a href="https://github.com/Niyog59/TalentYak/blob/main/docs/PORTFOLIO.md">Technical overview</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI"><img src="assets/projects/vendor-performance-logo.png" alt="Vendor Performance Analysis logo" width="84"></a>
+<h3><a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI">Vendor Performance Analysis</a></h3>
+<p>A liquor distributor's purchase and sales records, loaded into SQLite, summarized in SQL, and analyzed in Python and Power BI. The top 10 vendors account for about 66% of purchase dollars, and about $2.71M is tied up in unsold inventory. The repo includes the written report and the Power BI dashboard.</p>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/sql-dark.svg"><img src="assets/stack/sql-light.svg" alt="SQL" title="SQL" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/python-dark.svg"><img src="assets/stack/python-light.svg" alt="Python" title="Python" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/pandas-dark.svg"><img src="assets/stack/pandas-light.svg" alt="pandas" title="pandas" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/powerbi-dark.svg"><img src="assets/stack/powerbi-light.svg" alt="Power BI" title="Power BI" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/jupyter-dark.svg"><img src="assets/stack/jupyter-light.svg" alt="Jupyter" title="Jupyter" height="24"></picture>
+</p>
+<p><a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI">Source</a> · <a href="https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI/blob/main/Vendor%20Performance%20Report.pdf">Report (PDF)</a></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/Niyog59/Airline-Profitability"><img src="assets/projects/airline-profitability-logo.png" alt="Airline Route Profitability logo" width="84"></a>
+<h3><a href="https://github.com/Niyog59/Airline-Profitability">Airline Route Profitability</a></h3>
+<p>Built with Shaheer Ahmed. An R analysis of profitability across 7,974 simulated flights for a Dubai-based airline (a Kaggle dataset). Long-haul flights averaged about $160K profit per flight, while short-haul flights lost about $9K on average. The data is simulated, so these are patterns in the dataset, not causes.</p>
+<p>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/r-dark.svg"><img src="assets/stack/r-light.svg" alt="R" title="R" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/tidyverse-dark.svg"><img src="assets/stack/tidyverse-light.svg" alt="tidyverse" title="tidyverse" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/ggplot2-dark.svg"><img src="assets/stack/ggplot2-light.svg" alt="ggplot2" title="ggplot2" height="24"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack/rstudio-dark.svg"><img src="assets/stack/rstudio-light.svg" alt="RStudio" title="RStudio" height="24"></picture>
+</p>
+<p><a href="https://github.com/Niyog59/Airline-Profitability">Source</a></p>
+</td>
+</tr>
+</table>
 
-**[Airline Route Profitability](https://github.com/Niyog59/Airline-Profitability)**, with
-Shaheer Ahmed. We used R to look at what goes with profit in a simulated year of 7,974 flights
-for a Dubai-based airline (a Kaggle dataset). Long-haul flights averaged about $160K profit per
-flight, while short-haul flights lost about $9K on average, and a third of all flights lost
-money. Season and demand level lined up with profit too. Because the data is simulated and the
-comparisons are by group, these are patterns in this dataset, not causes.
-<sub>R · tidyverse · ggplot2 · R Markdown</sub>
+## More projects
 
-**[Vendor Performance](https://github.com/Niyog59/Vendor-Performance-Analysis-SQL-Python-PowerBI)**.
-I loaded a liquor distributor's purchase and sales records (a portfolio dataset) into SQLite,
-built a vendor and brand summary in SQL, and analyzed it in Python and Power BI. The top 10
-vendors made up about 66% of purchase dollars. Items bought in the largest quantities had about
-72% lower unit costs than those bought in the smallest. That compares different products, so
-it does not show that ordering more lowers the price.
-<sub>SQL · SQLite · Python · pandas · Power BI</sub>
-
-<sub>Also: [airline occupancy in SQL and Python](https://github.com/Niyog59/Airlines-Data-Analysis-SQL-Python) · [gym database design in MySQL](https://github.com/Niyog59/Gym-Management-Project-MySQL) · [geocoding API with FastAPI](https://github.com/Niyog59/Geocoding-API)</sub>
-
-## Software
-
-**[TalentYak](https://github.com/Niyog59/TalentYak)**, an independent project. A fitness coaching
-platform for Nepali coaches and clients abroad that I designed and built on my own with Next.js,
-TypeScript, and Supabase PostgreSQL. Most of the interesting work was on the data side: row-level
-security so people only see their own records, integer money math with tests, and payment
-events that are safe to receive twice. It is still in development with a test site; it is not
-open to customers and handles no real payments.
-<a href="https://github.com/Niyog59/TalentYak/blob/main/docs/PORTFOLIO.md">Technical overview</a>
-
-<sub>I also built [MeetMerchants](https://meetmerchants.com), a B2B marketplace for businesses and suppliers in Nepal.</sub>
+- [Airline occupancy in SQL and Python](https://github.com/Niyog59/Airlines-Data-Analysis-SQL-Python)
+- [Gym database design in MySQL](https://github.com/Niyog59/Gym-Management-Project-MySQL)
+- [Geocoding API with FastAPI](https://github.com/Niyog59/Geocoding-API)
+- [MeetMerchants](https://meetmerchants.com), a B2B marketplace for businesses and suppliers in Nepal
 
 ## Tools
 
