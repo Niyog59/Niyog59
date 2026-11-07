@@ -9,11 +9,7 @@
 Hi, I'm Niyog. I like building data pipelines and then poking at the data they collect. Most
 of my work is Python and SQL: getting data in reliably, keeping it honest, and turning it into
 something I can actually answer questions with.
-
-<!-- OBSERVATORY_STATS:START -->
-51 employer boards checked twice a day · 148 open jobs tracked right now · 259 jobs kept in total · requirements extracted on 166 of 167 kept postings (99%) · updated 2026-11-05
-<!-- OBSERVATORY_STATS:END -->
-
+Following are some of my works:
 ## Job Observatory
 
 <a href="https://github.com/Niyog59/Job-Market-Intelligence"><img src="assets/projects/job-observatory-logo.png" alt="Job Observatory logo" width="84"></a>
