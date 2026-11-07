@@ -11,7 +11,7 @@ of my work is Python and SQL: getting data in reliably, keeping it honest, and t
 something I can actually answer questions with.
 
 <!-- OBSERVATORY_STATS:START -->
-51 employer boards checked twice a day · 148 open jobs tracked right now · 259 jobs kept in total · requirements extracted on 166 of 167 kept postings (99%) · updated 2026-11-05
+51 employer boards checked three times a day · 148 open jobs tracked right now · 259 jobs kept in total · requirements extracted on 166 of 167 kept postings (99%) · updated 2026-11-05
 <!-- OBSERVATORY_STATS:END -->
 
 ## Job Observatory
@@ -21,7 +21,7 @@ something I can actually answer questions with.
 - **What it is:** a pipeline and website that collects job listings from employer boards and keeps every version of every listing, live on one AWS server since November 4, 2026.
 - **The hard part:** an AI model pulls requirements out of each listing, and Python checks every answer against the listing text before dbt turns the history into reports. Only complete scans count as proof a job closed.
 
-I host it on AWS, on one EC2 server. Python collectors pull the postings from <!--PROFILE:boards-->51<!--/PROFILE:boards--> Greenhouse and Lever boards, twice a day, and the jobs show up on the live site for anyone to search. Airflow runs the whole schedule: collection, extraction, the dbt build, and publishing, and it retries anything that failed every 15 minutes. Raw pages go to S3 as they are collected, and the database is backed up to S3, so the data is not only on the server.
+I host it on AWS, on one EC2 server. Python collectors pull the postings from <!--PROFILE:boards-->51<!--/PROFILE:boards--> Greenhouse and Lever boards, three times a day, and the jobs show up on the live site for anyone to search. Airflow runs the whole schedule: collection, extraction, the dbt build, and publishing, and it retries anything that failed every 15 minutes. Raw pages go to S3 as they are collected, and the database is backed up to S3, so the data is not only on the server.
 
 An AI model reads each posting and pulls out the requirements, the location, and the job family into fixed fields. Every value it returns has to quote the posting it came from, word for word. dbt turns those fields into the reporting tables. The reports page and the dashboard feed are rebuilt from those tables at every publish, so the dashboards always run on the newest batch of data.
 
