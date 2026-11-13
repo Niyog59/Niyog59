@@ -11,7 +11,7 @@ of my work is Python and SQL: getting data in reliably, keeping it honest, and t
 something I can actually answer questions with.
 
 <!-- OBSERVATORY_STATS:START -->
-63 employer boards checked three times a day · 184 open jobs tracked right now · 208 jobs kept in total · requirements extracted on 201 of 203 kept postings (99%) · updated 2026-11-12
+63 employer boards checked three times a day · 184 open jobs tracked right now · 208 jobs kept in total · requirements extracted on 203 of 203 kept postings (100%) · updated 2026-11-12
 <!-- OBSERVATORY_STATS:END -->
 
 ## Job Observatory
@@ -42,7 +42,7 @@ I also tested Spark. I rebuilt three of the reporting models in PySpark and ran 
 ### What the job data shows
 
 <!-- OBSERVATORY_INSIGHTS:START -->
-Of the 184 open data, analytics, and software jobs I track in Dallas-Fort Worth, Houston, and remote-for-Texas (41 employers, collected through 2026-11-12), only 7% of those with a clear level are junior and 87% are senior or above. 25% mention generative AI. It is a small group of employers and a single snapshot, so it describes these listings, not the whole market.
+Of the 184 open data, analytics, and software jobs I track in Dallas-Fort Worth, Houston, and remote-for-Texas (41 employers, collected through 2026-11-12), only 7% of those with a clear level are junior and 88% are senior or above. 25% mention generative AI. It is a small group of employers and a single snapshot, so it describes these listings, not the whole market.
 <!-- OBSERVATORY_INSIGHTS:END -->
 
 ## Other projects
