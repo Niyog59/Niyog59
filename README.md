@@ -11,7 +11,7 @@ of my work is Python and SQL: getting data in reliably, keeping it honest, and t
 something I can actually answer questions with.
 
 <!-- OBSERVATORY_STATS:START -->
-63 employer boards checked three times a day · 186 open jobs tracked right now · 226 jobs kept in total · requirements extracted on 207 of 207 kept postings (100%) · updated 2026-11-25
+63 employer boards checked three times a day · 186 open jobs tracked right now · 226 jobs kept in total · requirements extracted on 206 of 207 kept postings (100%) · updated 2026-11-25
 <!-- OBSERVATORY_STATS:END -->
 
 ## Job Observatory
